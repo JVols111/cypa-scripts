@@ -15,9 +15,6 @@ netsh advfirewall firewall set rule name="Remote Assistance (SSDP UDP-In)" new e
 netsh advfirewall firewall set rule name="Remote Assistance (TCP-In)" new enable=no 
 netsh advfirewall firewall set rule name="Telnet Server" new enable=no 
 netsh advfirewall firewall set rule name="netcat" new enable=no
-REM Password Policy
-net accounts /lockoutthreshold:5 /MINPWLEN:8 /MAXPWAGE:30 /MINPWAGE:1 /UNIQUEPW:5 
-start secpol.msc /wait
 REM Auditing
 auditpol /set /category:* /success:enable
 auditpol /set /category:* /failure:enable
